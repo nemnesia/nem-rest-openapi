@@ -1,0 +1,1366 @@
+{
+	"info": {
+		"_postman_id": "8db751da-42b0-4b0c-9706-509f474e3faf",
+		"name": "NEM NIS API",
+		"description": "Version 1.19\n\n19:27, March 20, 2017\n\n[http://bob.nem.ninja/docs/](http://bob.nem.ninja/docs/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49415600",
+		"_collection_link": "https://nemnesia-6542425.postman.co/workspace/4effe5af-02ba-4afc-8dda-d994f95b3d28/collection/49415600-8db751da-42b0-4b0c-9706-509f474e3faf?action=share&source=collection_link&creator=49415600"
+	},
+	"item": [
+		{
+			"name": "Heart beat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/heartbeat",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving account data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/generate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting the account data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/get?address=NAPWGNSU24MHS5QZ6E5ZO4VH3V3LWR7AKRHUZQKH ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"get"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "NAPWGNSU24MHS5QZ6E5ZO4VH3V3LWR7AKRHUZQKH "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting the account data (public key)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/get/from-public-key?publicKey=0faf7cb9db726cac69b86ec1543fb4b50c7fa84ffc45bab9d5b63c9af54e0f15 ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"get",
+						"from-public-key"
+					],
+					"query": [
+						{
+							"key": "publicKey",
+							"value": "0faf7cb9db726cac69b86ec1543fb4b50c7fa84ffc45bab9d5b63c9af54e0f15 "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting the original account data for a delegate account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/get/forwarded?address=NC2ZQKEFQIL3JZEOB2OZPWXWPOR6LKYHIROCR7PK",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"get",
+						"forwarded"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "NC2ZQKEFQIL3JZEOB2OZPWXWPOR6LKYHIROCR7PK"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting the original account data for a delegate account (Public key)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"get",
+						"forwarded",
+						"from-public-key"
+					],
+					"query": [
+						{
+							"key": "publicKey",
+							"value": "bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting the account status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"status"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting transaction data for an account (Incoming)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/transfers/incoming?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"transfers",
+						"incoming"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						},
+						{
+							"key": "hash",
+							"value": "949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting transaction data for an account (Outgoing)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/transfers/outgoing?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"transfers",
+						"outgoing"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						},
+						{
+							"key": "hash",
+							"value": "949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting transaction data for an account (All)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/transfers/all?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"transfers",
+						"all"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						},
+						{
+							"key": "hash",
+							"value": "949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unconfirmed transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/unconfirmedTransactions?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"unconfirmedTransactions"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting harvest info data for an account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/harvests?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=81d52a7df4abba8bb1613bcc42b6b93cf3114524939035d88ae8e864cd2c34c8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"harvests"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+						},
+						{
+							"key": "hash",
+							"value": "81d52a7df4abba8bb1613bcc42b6b93cf3114524939035d88ae8e864cd2c34c8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving account importances for accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/importances",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"importances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving namespaces that an account owns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"namespace",
+						"page"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH"
+						},
+						{
+							"key": "parent",
+							"value": "makoto.metal"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving mosaic definitions that an account has created",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal.coins",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"mosaic",
+						"definition",
+						"page"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH"
+						},
+						{
+							"key": "parent",
+							"value": "makoto.metal.coins"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving mosaics that an account owns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"mosaic",
+						"owned"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block chain height",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/chain/height",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"chain",
+						"height"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block chain score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/chain/score",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"chain",
+						"score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Last block of the block chain score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/chain/last-block",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"chain",
+						"last-block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting a block with a given hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/block/get?blockHash=58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"block",
+						"get"
+					],
+					"query": [
+						{
+							"key": "blockHash",
+							"value": "58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basic node information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/info",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extended node information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/extended-info",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"extended-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete neighborhood",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/peer-list/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"peer-list",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reachable neighborhood",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/peer-list/reachable",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"peer-list",
+						"reachable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active neighborhood",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/peer-list/active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"peer-list",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maximum chain height in the active neighborhood",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/active-peers/max-chain-height",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"active-peers",
+						"max-chain-height"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requesting node experiences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/experiences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving root namespaces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/namespace/roots?id=26754&pageSize;=35",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"namespace",
+						"roots"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "26754"
+						},
+						{
+							"key": "pageSize;",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving a specific namespace",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/namespace?namespace=makoto.metal.coins",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"namespace"
+					],
+					"query": [
+						{
+							"key": "namespace",
+							"value": "makoto.metal.coins"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving mosaic definitions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/namespace/mosaic/definition/page?namespace=makoto.metal.coins",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"namespace",
+						"mosaic",
+						"definition",
+						"page"
+					],
+					"query": [
+						{
+							"key": "namespace",
+							"value": "makoto.metal.coins"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring the network time",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/debug/time-synchronization",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"debug",
+						"time-synchronization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring incoming calls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/debug/connections/incoming",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"debug",
+						"connections",
+						"incoming"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring outgoing calls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/debug/connections/outgoing",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"debug",
+						"connections",
+						"outgoing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring timers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/debug/timers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"debug",
+						"timers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving historical account data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bigalice3.nem.ninja:7890/account/historical/get?address=NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ&startHeight=17592&endHeight=17592&increment=1",
+					"protocol": "http",
+					"host": [
+						"bigalice3",
+						"nem",
+						"ninja"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"historical",
+						"get"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ"
+						},
+						{
+							"key": "startHeight",
+							"value": "17592"
+						},
+						{
+							"key": "endHeight",
+							"value": "17592"
+						},
+						{
+							"key": "increment",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incoming transactions with decoded messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/local/account/transfers/incoming",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"local",
+						"account",
+						"transfers",
+						"incoming"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Outgoing transactions with decoded messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/local/account/transfers/outgoing",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"local",
+						"account",
+						"transfers",
+						"outgoing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All transactions with decoded messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/local/account/transfers/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"local",
+						"account",
+						"transfers",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlocking the account (enables harvesting)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "privateKey",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/unlock",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"unlock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locking the account (stops harvesting)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "privateKey",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/lock",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"lock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving the unlock info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/account/unlocked/info",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"account",
+						"unlocked",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting a block with a given height",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "blockHeight ",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/block/at/public",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"block",
+						"at",
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting part of a chain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "blockHeight",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/local/chain/blocks-after",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"local",
+						"chain",
+						"blocks-after"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booting the local node",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bootNodeRequest",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/node/boot",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"node",
+						"boot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initiating a transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestPrepareAnnounce",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/transaction/prepare-announce",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"transaction",
+						"prepare-announce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sending the data to NIS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestAnnounce",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/transaction/announce",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"transaction",
+						"announce"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
